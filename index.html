@@ -3,39 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sign Up</title>
+    <title>Survey</title>
 </head>
 <body>
-    <form action="/action_page.php" >
-        <div class="container">
-            <p>Please Sign Up First!</p>
-            <div class="form">
-                <label for="email">Email</label>
-                <input type="text"  name="email" id="input" placeholder="Enter Email" required>
-            </div >
-            <div class="form">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="input"  placeholder="Enter password" required>
+    <div class="container">
+        <header class="header">
+            <h1 class="text-center" id="title">
+                FreeCodeCamp Survey Form
+            </h1>
+            <p id="description" class="description text-center">
+                Thankyou for taking your time to help us improve the platform
+            </p>
+        </header>
+        <form id="form-survey">
+            <div class="form-group">
+                <label for="text" id="name-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
             </div>
-            <div class="form">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="input" placeholder="Repeat password" required>
+            <div class="form-group">
+                <label for="text" id="email-label">Email</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Enter Your Email" required>
             </div>
-            <div id="check">
-            <label class="check" for="checkbox">
-                <input type="checkbox" name="remember"  checked>Remember Me
-            </label>
-        </div>
-            <p class="levi">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-            
-            <div class="container-btn">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="button" class="signup">Submit</button>
+            <div class="form-group">
+                <label for="number" id="number-label">
+                    Age
+                    <span class="clue">(optional)</span>
+                </label>
+                <input type="number" id="number" name="age" min="10" max="100" class="form-control" placeholder="Age" required>
             </div>
-        
-        </div>
-    </form>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <section id="dropdown" class="form-control" name="role" required>
+                    <option disabled selected value>Select your current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer Not to Say</option>
+                    <option value="other">Other</option>
+                </section>
+                <div class="form-group">
+                    <label >
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>
+                    Definitely
+                </label>
+                </div>
+                <div class="form-group">
+                    <label >
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio" checked>
+                    Maybe
+                </label>
+                </div>
+                <div class="form-group">
+                    <label >
+                    <input type="radio" name="user-recommend" value="not-sure" class="input-radio" checked>
+                    Not Sure
+                </label>
+                </div>
+                
+            </div>
+        </form>
 
+    </div>
+    
 </body>
 </html>
