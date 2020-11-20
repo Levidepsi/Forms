@@ -1,0 +1,72 @@
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.menu .toggler{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger line */
+
+.menu-wrap .hamburger > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width:100% ;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrap .hamburger > div:after{top: 10px;}
+
+.menu-wrap  .hamburger:hover > div{
+    transform: rotate(135deg);
+    transition: .2s;
+}
+
+.menu-wrap  .hamburger:hover > div::before,
+.menu-wrap  .hamburger:hover > div::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.menu-wrap  .hamburger:hover:checked > div{
+    transform: rotate(225deg);
+}
