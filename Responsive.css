@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #333;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+}
+.container{
+    display: grid;
+}
+ul{
+    display: grid;
+    grid-template-columns: ;
+}
+
+#nav.bar{
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    overflow: hidden;
+}
+
