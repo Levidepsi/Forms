@@ -1,73 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 :root{
-    --primary-color: rgba(13, 110, 139, 0.75);
-    --overlay-color: rgba(24, 39, 51, 0.85);
-    --menu-speed: 0.75s;
+    --primary-color: #047aed;
 }
 
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family: 'Roboto ' sans-serif;
-    line-height: 1.4;
+    font-family: 'Lato' sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container{
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 3rem;
+ul{
+    list-style: none;
 }
 
-.showcase{
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+h1, 
+h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+
+img {
+    width: 100%;
+}
+
+.nav-bar {
     background-color: var(--primary-color);
     color: #fff;
-    height: 100vh;
+    height: 70px;
+}
+
+.nav-bar .flex{
+    justify-content: space-between;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.nav-bar a:hover{
+    border-bottom: 2px #fff solid;
+}
+/* Showcase */
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
     position: relative;
 }
 
-.showcase::before{
-    content: '';
-    background: url(../img/showcase.jpeg) no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.showcase .showcase-inner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-}
-
 .showcase h1{
-    font-size: 4rem;
-
+    font-size: 40px;
 }
 
 .showcase p{
-    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus{
+    outline: none;
 }
 
 .btn{
     display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
     border: none;
-    background-color: var(--primary-color) ;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    transition: opacity 1s ease-in;
-} 
+    border-radius: 5px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px #fff solid;
+}
 
 .btn:hover{
-    opacity: 0.7;
+    transform: scale(1.07);
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-2deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    
+}
+
+/* stats */
+
+.stats{
+    padding-top: 100px ;
+}
+/* Utilities */
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.card{
+    background-color: #fff;
+    color:#333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* margin */
+.my-1{
+    margin: 1rem 0;
+}
+
+.my-2{
+    margin: 1.5rem 0;
+}
+
+.my-3{
+    margin: 2rem 0;
+}
+
+.my-4{
+    margin: 3rem 0;
+}
+
+.my-5{
+    margin: 4rem 0;
 }
